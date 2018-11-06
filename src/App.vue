@@ -1,8 +1,5 @@
 <template>
-  <!--<div id="app">-->
-    <!--<img src="static/img/logo.png" v-draggable>-->
-  <!--</div>-->
-  <div class="app"></div>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -10,9 +7,6 @@
 
 export default {
   name: 'App'
-  // directives: {
-  //   Draggable
-  // }
 }
 </script>
 
