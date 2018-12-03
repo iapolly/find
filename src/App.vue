@@ -3,10 +3,13 @@
 </template>
 
 <script>
-/* import { Draggable } from 'draggable-vue-directive' */
+import { Draggable } from 'draggable-vue-directive'
 
 export default {
-  name: 'App'
+  name: 'App',
+  directives: {
+    Draggable
+  }
 }
 </script>
 
