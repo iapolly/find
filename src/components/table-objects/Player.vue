@@ -36,6 +36,5 @@ export default {
 <style scoped>
   #player {
     width: 100px;
-    height: 100px;
   }
 </style>
