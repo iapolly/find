@@ -2,8 +2,12 @@
     <div id="table">
       <ball></ball>
       <player></player>
+      <paper></paper>
       <laptop></laptop>
       <lipstick></lipstick>
+      <paper></paper>
+      <paper></paper>
+      <paper></paper>
     </div>
 </template>
 
@@ -12,6 +16,7 @@ import ball from '../components/table-objects/Ball'
 import player from '../components/table-objects/Player'
 import  laptop from './table-objects/Laptop'
 import lipstick from './table-objects/Lipstick'
+import paper from './table-objects/Paper'
 
 export default {
   name: 'table',
@@ -19,7 +24,8 @@ export default {
     ball,
     player,
     laptop,
-    lipstick
+    lipstick,
+    paper
   }
 }
 </script>
