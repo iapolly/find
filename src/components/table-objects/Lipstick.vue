@@ -1,6 +1,6 @@
 <template>
   <div class="table-object">
-    <img id="lipstick" v-draggable v-on:click="action" src="/static/img/Помада.png">
+    <img id="lipstick" v-on:click="action" src="/static/img/Помада.png">
     <img id="kiss" src="/static/img/kiss.png" hidden>
   </div>
 </template>

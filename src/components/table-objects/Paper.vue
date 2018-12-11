@@ -1,6 +1,6 @@
 <template>
   <div class="table-object">
-    <img id="ball" v-draggable src="/static/img/Paper.png">
+    <img class="paper" src="/static/img/Paper.png">
   </div>
 </template>
 
@@ -16,7 +16,7 @@
 </script>
 
 <style scoped>
-  #ball {
+  .paper {
     width: 70px;
   }
 </style>

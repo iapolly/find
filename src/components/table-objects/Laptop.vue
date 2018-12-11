@@ -1,6 +1,6 @@
 <template>
   <div class="table-object">
-    <img id="laptop" v-draggable v-on:dblclick="defaultImg = yellowImg" :src=defaultImg>
+    <img id="laptop" v-on:dblclick="defaultImg = yellowImg" :src=defaultImg>
   </div>
 </template>
 

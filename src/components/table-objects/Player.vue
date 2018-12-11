@@ -1,6 +1,6 @@
 <template>
   <div class="table-object">
-    <img id="player" v-draggable v-on:dblclick="play" src="/static/img/плеер.png">
+    <img id="player" v-on:dblclick="play" src="/static/img/плеер.png">
     <audio ref="audioElm" src="/static/mp3/kol.mp3"></audio>
   </div>
 </template>
