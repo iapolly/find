@@ -11,7 +11,7 @@
       data: function () {
         return{
           defaultImg: "/static/img/Ноутбук0.png", 
-          yellowImg: "/static/img/Ноутбук.png"
+          yellowImg: "/static/img/Ноутбук1.png"
         }
       },
       directives: {
@@ -22,7 +22,6 @@
 
 <style scoped>
   #laptop {
-    width: 300px;
+    width: 200px;
   }
-
 </style>

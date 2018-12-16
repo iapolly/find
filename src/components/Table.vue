@@ -1,10 +1,10 @@
 <template>
     <div id="table" ref="bounder">
-      <ball v-draggable="draggableValue"></ball>
-      <player v-draggable="draggableValue"></player>
-      <laptop v-draggable="draggableValue"></laptop>
-      <lipstick v-draggable="draggableValue"></lipstick>
-      <paper v-draggable="draggableValue"></paper>
+      <ball v-bind:style="{left: '100px', top: '30px'}" v-draggable="draggableValue"></ball>
+      <player v-bind:style="{left: '100px', top: '300px'}" v-draggable="draggableValue"></player>
+      <laptop v-bind:style="{left: '76px', top: '40px'}" v-draggable="draggableValue"></laptop>
+      <lipstick v-bind:style="{left: '250px', top: '250px'}" v-draggable="draggableValue"></lipstick>
+      <paper v-bind:style="{left: 10 + 'px', top: randomTopVal + 'px'}" v-draggable="draggableValue"></paper>
     </div>
 </template>
 
@@ -28,11 +28,28 @@ export default {
   directives: {
     Draggable
   },
+  methods: {
+    randomLeft: function () {
+    let min = 0;
+    let max = 560;
+    var rand = min - 0.5 + Math.random() * (max - min + 1);
+    rand = Math.round(rand);
+    return rand;
+    },
+    randomTop: function () {
+    let min = 0;
+    let max = 300;
+    var rand = min - 0.5 + Math.random() * (max - min + 1);
+    rand = Math.round(rand);
+    return rand;
+    }
+  },
   data() {
     return {
       draggableValue: {
         boundingElement: undefined
-      }
+      },
+      randomTopVal: this.randomTop
   }
   },
   mounted() {
@@ -53,5 +70,8 @@ export default {
     bottom: 0;
     left: 0;
     margin: auto;
+  }
+  .table-object {
+    position: absolute;
   }
 </style>
