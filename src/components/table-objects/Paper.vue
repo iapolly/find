@@ -5,13 +5,13 @@
 </template>
 
 <script>
-  import { Draggable } from 'draggable-vue-directive'
-    export default {
-      name: "Paper",
-      directives: {
-        Draggable
-      }
+import { Draggable } from 'draggable-vue-directive'
+  export default {
+    name: "Paper",
+    directives: {
+      Draggable
     }
+  }
 
 </script>
 

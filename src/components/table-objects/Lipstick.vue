@@ -17,7 +17,9 @@
         kiss.style.marginLeft = document.getElementById("lipstick").offsetWidth + 'px';
         kiss.style.marginTop = document.getElementById("lipstick").offsetTop + 'px';
         kiss.hidden = !kiss.hidden;
-        setTimeout(function (){kiss.hidden = !kiss.hidden}, 1000);
+        setTimeout(function (){
+          kiss.hidden = !kiss.hidden}, 1000);
+
       }
     },
     directives: {
