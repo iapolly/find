@@ -1,10 +1,12 @@
 * {
-  font-family: 'Acme', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
+
 .header {
-  height: 700px;
-  background: white;
+  height: 1080px;
+  background: url(../img/background.jpg) no-repeat center top;;
+  background-size: 100%;
 }
 
 .header li {
@@ -41,5 +43,8 @@
   color: red;
   text-decoration: none;
 }
+
+
+
 
 
