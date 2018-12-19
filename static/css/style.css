@@ -4,9 +4,16 @@
 
 
 .header {
-  height: 1080px;
-  background: url(../img/background.jpg) no-repeat center top;;
-  background-size: 100%;
+  height: 2000px;
+  background: url(../img/background.jpg) no-repeat;
+  background-attachment:fixed;
+  text-align: center;
+  width: 100%;
+}
+
+. header h1 {
+  font-size: 30px;
+  font-weight: lighter;
 }
 
 .header li {
@@ -14,11 +21,13 @@
   border-radius: 10px;
   list-style-type: none;
   width: 400px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
   margin: 20px 0;
   background: #f2f2f2;
+  opacity: 0.7;
+  font-size: 25px;
 }
 
 .header li:hover {
@@ -27,6 +36,8 @@
 
 .header ul {
   display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header h1 {
