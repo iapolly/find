@@ -1,9 +1,9 @@
 <template>
     <div id="table" ref="bounder">
-      <ball v-draggable="draggableValue"></ball>
-      <player v-draggable="draggableValue"></player>
+      <ball  style="position: fixed;" v-draggable="draggableValue"></ball>
+      <player style="position: fixed; top: 200px; left: 600px;" v-draggable="draggableValue"></player>
       <laptop v-draggable="draggableValue"></laptop>
-      <lipstick v-draggable="draggableValue"></lipstick>
+      <lipstick style="position: fixed; top: 250px; left: 500px;" v-draggable="draggableValue"></lipstick>
       <paper v-draggable="draggableValue"></paper>
       <can v-draggable="draggableValue"></can>
     </div>
@@ -61,8 +61,12 @@ export default {
         // }
 
       }
-  }
+    }
   },
+  // beforeMount: function(){
+  //   var ball = $('#ball');
+  //   ball.offset({top:300, left:200});
+  // },
   mounted() {
     this.draggableValue.boundingElement = this.$refs.bounder;
     // $('#table').each(function(o){
@@ -70,8 +74,7 @@ export default {
     //     position: 'relative'
     //   });
     //   alert("jkjkj");
-    // var ball = $('#ball');
-    // ball.offset({top:300, left:200});
+
     //
     // });
     // $('#ball').offsetLeft = Math.round(0.5 + Math.random() * (301)) + 'px';
