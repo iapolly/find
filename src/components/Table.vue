@@ -1,14 +1,15 @@
 <template>
     <div id="table" ref="bounder">
-      <ball v-bind:style="{left: '100px', top: '30px'}" v-draggable="draggableValue"></ball>
-      <player v-bind:style="{left: '100px', top: '300px'}" v-draggable="draggableValue"></player>
-      <laptop v-bind:style="{left: '76px', top: '40px'}" v-draggable="draggableValue"></laptop>
-      <lipstick v-bind:style="{left: '250px', top: '250px'}" v-draggable="draggableValue"></lipstick>
-      <paper v-bind:style="{left: 10 + 'px', top: randomTopVal + 'px'}" v-draggable="draggableValue"></paper>
+      <ball v-draggable="draggableValue"></ball>
+      <player v-draggable="draggableValue"></player>
+      <laptop v-draggable="draggableValue"></laptop>
+      <lipstick v-draggable="draggableValue"></lipstick>
+      <paper v-draggable="draggableValue"></paper>
     </div>
 </template>
 
 <script>
+  import $ from 'jquery'
   import { Draggable } from 'draggable-vue-directive'
 import ball from '../components/table-objects/Ball'
 import player from '../components/table-objects/Player'
@@ -28,32 +29,50 @@ export default {
   directives: {
     Draggable
   },
-  methods: {
-    randomLeft: function () {
-    let min = 0;
-    let max = 560;
-    var rand = min - 0.5 + Math.random() * (max - min + 1);
-    rand = Math.round(rand);
-    return rand;
-    },
-    randomTop: function () {
-    let min = 0;
-    let max = 300;
-    var rand = min - 0.5 + Math.random() * (max - min + 1);
-    rand = Math.round(rand);
-    return rand;
-    }
+  // methods: {
+  //   randomLeft: function () {
+  //   let min = 0;
+  //   let max = 560;
+  //   var rand = min - 0.5 + Math.random() * (max - min + 1);
+  //   rand = Math.round(rand);
+  //   return rand;
+  //   },
+  //   randomTop: function () {
+  //   let min = 0;
+  //   let max = 300;
+  //   var rand = min - 0.5 + Math.random() * (max - min + 1);
+  //   rand = Math.round(rand);
+  //   return rand;
+  //   }
+  // },
+  created() {
+
   },
   data() {
     return {
       draggableValue: {
-        boundingElement: undefined
-      },
-      randomTopVal: this.randomTop
+        boundingElement: $('#table'),
+        resetInitialPos: {
+          top: '100px',
+          left: '100px'
+        }
+
+      }
   }
   },
   mounted() {
     this.draggableValue.boundingElement = this.$refs.bounder;
+    // $('#table').each(function(o){
+    //   $(o).css({
+    //     position: 'relative'
+    //   });
+    //   alert("jkjkj");
+    // var ball = $('#ball');
+    // ball.offset({top:300, left:200});
+    //
+    // });
+    // $('#ball').offsetLeft = Math.round(0.5 + Math.random() * (301)) + 'px';
+    // $('#ball').offsetTop = Math.round(0.5 + Math.random() * (561)) + 'px'
   }
 }
 </script>
@@ -70,8 +89,5 @@ export default {
     bottom: 0;
     left: 0;
     margin: auto;
-  }
-  .table-object {
-    position: absolute;
   }
 </style>

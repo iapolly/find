@@ -1,5 +1,7 @@
 <template>
-  <img id="ball" v-on:dblclick="action" src="/static/img/мячик.png">
+  <div class="table-object">
+    <img id="ball" v-on:dblclick="action" src="/static/img/мячик.png">
+  </div>
 </template>
 
 <script>
