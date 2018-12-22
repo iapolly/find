@@ -9,6 +9,7 @@
 </template>
 
 <script>
+  import $ from 'jquery'
   import { Draggable } from 'draggable-vue-directive'
 import ball from '../components/table-objects/Ball'
 import player from '../components/table-objects/Player'
@@ -28,15 +29,50 @@ export default {
   directives: {
     Draggable
   },
+  // methods: {
+  //   randomLeft: function () {
+  //   let min = 0;
+  //   let max = 560;
+  //   var rand = min - 0.5 + Math.random() * (max - min + 1);
+  //   rand = Math.round(rand);
+  //   return rand;
+  //   },
+  //   randomTop: function () {
+  //   let min = 0;
+  //   let max = 300;
+  //   var rand = min - 0.5 + Math.random() * (max - min + 1);
+  //   rand = Math.round(rand);
+  //   return rand;
+  //   }
+  // },
+  created() {
+
+  },
   data() {
     return {
       draggableValue: {
-        boundingElement: undefined
+        boundingElement: $('#table'),
+        resetInitialPos: {
+          top: '100px',
+          left: '100px'
+        }
+
       }
   }
   },
   mounted() {
     this.draggableValue.boundingElement = this.$refs.bounder;
+    // $('#table').each(function(o){
+    //   $(o).css({
+    //     position: 'relative'
+    //   });
+    //   alert("jkjkj");
+    // var ball = $('#ball');
+    // ball.offset({top:300, left:200});
+    //
+    // });
+    // $('#ball').offsetLeft = Math.round(0.5 + Math.random() * (301)) + 'px';
+    // $('#ball').offsetTop = Math.round(0.5 + Math.random() * (561)) + 'px'
   }
 }
 </script>
