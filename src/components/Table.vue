@@ -5,6 +5,7 @@
       <laptop v-draggable="draggableValue"></laptop>
       <lipstick v-draggable="draggableValue"></lipstick>
       <paper v-draggable="draggableValue"></paper>
+      <can v-draggable="draggableValue"></can>
     </div>
 </template>
 
@@ -16,6 +17,7 @@ import player from '../components/table-objects/Player'
 import  laptop from './table-objects/Laptop'
 import lipstick from './table-objects/Lipstick'
 import paper from './table-objects/Paper'
+  import can from './table-objects/TrashCan'
 
 export default {
   name: 'table',
@@ -24,7 +26,8 @@ export default {
     player,
     laptop,
     lipstick,
-    paper
+    paper,
+    can
   },
   directives: {
     Draggable
