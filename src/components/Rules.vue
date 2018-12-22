@@ -9,3 +9,7 @@ export default {
   name: 'Rules'
 }
 </script>
+
+<style>
+
+</style>
