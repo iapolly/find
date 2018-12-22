@@ -52,10 +52,10 @@ export default {
     return {
       draggableValue: {
         boundingElement: $('#table'),
-        resetInitialPos: {
-          top: '100px',
-          left: '100px'
-        }
+        // resetInitialPos: {
+        //   top: '100px',
+        //   left: '100px'
+        // }
 
       }
   }
