@@ -1,14 +1,15 @@
 <template>
   <div class="header text-center">
-    <h1>RULES:</h1>
+    <h1>CREDITS:</h1>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Rules'
-}
+    export default {
+        name: "Credits"
+    }
 </script>
 
-<style>
+<style scoped>
+
 </style>

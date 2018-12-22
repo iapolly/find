@@ -34,13 +34,17 @@
     }
 </script>
 
+<style>
+  @import '../../static/css/style.css';
+</style>
+
 <style scoped>
-  body{
-    overflow:hidden;
-    background-color:#fcfcfc;
-    margin:0;
-    padding:0;
-  }
+  /*body{*/
+    /*overflow:hidden;*/
+    /*background-color:#fcfcfc;*/
+    /*margin:0;*/
+    /*padding:0;*/
+  /*}*/
 
   .flipbook div {
     background-image: url("https://st.depositphotos.com/3008028/4295/i/950/depositphotos_42952635-stock-photo-paper-texture-old-paper-sheet.jpg");
@@ -60,8 +64,8 @@
   }
 
   .flipbook-viewport .flipbook{
-    width:922px;
-    height:400px;
+    width:700px;
+    height:300px;
     left:-461px;
     top:-300px;
   }
