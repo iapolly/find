@@ -1,13 +1,20 @@
 <template>
   <div id="cupboard">
-    <button v-on:click="show=!show">
+    <button @click="setBound" v-on:click="show=!show">
       Toggle
     </button>
-
+    <div id="bor" ref="border">
+    </div>
     <transition name="up">
-       <div v-if="show">
-         <div id="box">
-
+      <div v-if="show">
+        <div @click="changePos" id="box">
+          <ball v-bind:style="randomPosition" v-draggable="draggableValue"></ball>
+          <div v-bind:style="randomPosition" v-draggable="draggableValue">
+            <img src="../../static/img/монетка.png" alt="">
+          </div>
+          <div v-bind:style="randomPosition" v-draggable="draggableValue">
+            <img src="../../static/img/монетка.png" alt="">
+          </div>
          </div>
        </div>
     </transition>
@@ -15,27 +22,85 @@
 </template>
 
 <script>
+  import $ from 'jquery'
+  import ball from '../components/table-objects/Ball'
+  import player from '../components/table-objects/Player'
+  import { Draggable } from 'draggable-vue-directive'
     export default {
+    components: {
+      ball,
+      player
+    },
       name: "Сupboard",
       data() {
         return {
-          show: false
+          show: false,
+          draggableValue: {
+            boundingElement: this.$refs.border
+          }
         }
-      }
+      },
+      directives: {
+        Draggable
+      },
+      computed: {
+        randomPosition: function () {
+          return {
+            left: '300px',
+            top: '100px',
+            position: 'absolute'
+          }
+        }
+      },
+      methods: {
+        setBound: function () {
+          this.draggableValue.boundingElement = this.$refs.border;
+        },
+        changePos: function () {
+          var randXY = function(min,max){
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min + 'px';
+          };
+          //граница
+          let box = document.getElementById("box");
+          $("#box").children().each(function () {
+            let h = $(this)[0].firstChild.clientHeight;
+            let w = $(this)[0].firstChild.clientHeight;
+            let top = randXY(-100,box.offsetHeight - h -100);
+            let left = randXY(-300,box.offsetWidth - w - 300);
+            $(this).find("*").css({'top': top,'left': left, 'position': 'absolute'});
+          })
+        }
+      },
     }
 </script>
 
 <style scoped>
-  #box {
-
-    height: 430px;
-    width: 700px;
+  button {
     position: absolute;
+  }
+  img {
+    width: 40px;
+  }
+  #box {
+    background-color: darkred;
+    position: relative;
+    height: 300px;
+    width: 700px;
     right: 0;
     left: 0;
     margin: auto;
-    background-image: url("/static/img/capboard.png");
-    background-size: cover;
+  }
+  /*прослойка для драга*/
+  #bor {
+    /*background-color: indianred;*/
+    height: 300px;
+    width: 700px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: auto;
   }
   .up-enter-active, .up-leave-active {
     transition: all 1s;
