@@ -20,6 +20,6 @@ export default new Router({
     {path: '/second', component: Notebook},
     {path: '/credits', component: Credits},
     {path: '/cupboard', component: Cupboard},
-    {path: '/short', component: Shirt}
+    {path: '/shirt', component: Shirt}
   ]
 })
