@@ -45,7 +45,6 @@ export default {
     randomLeft: function () {
       let table = $('#table');
       let min = parseInt(table.css('margin-left'), 10);
-      alert(min);
       let max = min + 500;
       var rand = min - 0.5 + Math.random() * (max - min + 1);
       rand = Math.round(rand);
@@ -54,7 +53,7 @@ export default {
     randomTop: function () {
       let table = $('#table');
       let min = parseInt(table.css('margin-top'), 10);
-      alert(table.css('margin-top'));
+      alert(min);
       let max = min + 300;
       var rand = min - 0.5 + Math.random() * (max - min + 1)
       rand = Math.round(rand);

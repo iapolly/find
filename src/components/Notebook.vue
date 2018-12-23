@@ -1,111 +1,49 @@
 <template>
-  <div class="flipbook-viewport">
-    <div class="container">
-      <div class="flipbook">
-        <div>1</div>
-        <div>2</div>
-        <div>ll</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-      </div>
+  <div id="magazine">
+    <div id="first-page">
+      <h1>Open me</h1>
     </div>
+    <div id="second-page">
+
+    </div>
+    <div id="third-page"><span class="text">Page 3</span></div>
   </div>
 </template>
 
 <script>
   import $ from 'jquery';
   import '../lib/turn.min';
+  import VueSticker from 'vue-sticker'
     export default {
       name: "Notebook",
       mounted () {
-        $('.flipbook').turn({
-          width:922,
-
-          height:500,
-
-          elevation: 50,
-
-          gradients: true,
-
-          autoCenter: true
-        });
+        $('#magazine').turn({gradients: true, acceleration: true});
+      },
+      components: {
+        VueSticker
       }
     }
 </script>
 
-<style>
-  @import '../../static/css/style.css';
-</style>
-
 <style scoped>
-  /*body{*/
-    /*overflow:hidden;*/
-    /*background-color:#fcfcfc;*/
-    /*margin:0;*/
-    /*padding:0;*/
-  /*}*/
-
-  .flipbook div {
-    background-image: url("https://st.depositphotos.com/3008028/4295/i/950/depositphotos_42952635-stock-photo-paper-texture-old-paper-sheet.jpg");
+  h1 {
+    position: relative;
+    text-align:  center;
   }
-
-  .flipbook-viewport{
-    overflow:hidden;
-    width:100%;
-    height:100%;
+  #magazine{
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
   }
-
-  .flipbook-viewport .container{
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin:auto;
+  #magazine .turn-page{
+    background-color:#ccc;
   }
-
-  .flipbook-viewport .flipbook{
-    width:700px;
-    height:300px;
-    left:-461px;
-    top:-300px;
-  }
-
-  .flipbook-viewport .page{
-    width:461px;
-    height:600px;
-    background-color:white;
-    background-repeat:no-repeat;
-    background-size:100% 100%;
-  }
-
-  .flipbook .page{
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
-    -ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
-    -o-box-shadow:0 0 20px rgba(0,0,0,0.2);
-    box-shadow:0 0 20px rgba(0,0,0,0.2);
-  }
-
-  .flipbook-viewport .page img{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin:0;
-  }
-
-  .flipbook-viewport .shadow{
-    -webkit-transition: -webkit-box-shadow 0.5s;
-    -moz-transition: -moz-box-shadow 0.5s;
-    -o-transition: -webkit-box-shadow 0.5s;
-    -ms-transition: -ms-box-shadow 0.5s;
-
-    -webkit-box-shadow:0 0 20px #ccc;
-    -moz-box-shadow:0 0 20px #ccc;
-    -o-box-shadow:0 0 20px #ccc;
-    -ms-box-shadow:0 0 20px #ccc;
-    box-shadow:0 0 20px #ccc;
+  #magazine div {
+    background-color: gold;
   }
 </style>
