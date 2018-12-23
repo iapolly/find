@@ -1,18 +1,36 @@
 <template>
-  <div id="magazine">
-    <div id="first-page">
-      <h1>Open me</h1>
-    </div>
-    <div id="second-page">
+  <div class="container-book">
+    <div style="height: 100px"></div>
+    <div id="magazine">
+      <div id="first-page">
+        <h1>Open me</h1>
+      </div>
+      <div id="second-page">
+        <div class="stickers">
+          <!--<img v-draggable src="https://img.icons8.com/dusk/64/000000/christmas-penguin.png">-->
+          <!--<img src="https://img.icons8.com/dusk/64/000000/christmas-candy.png">-->
+          <!--<img src="https://img.icons8.com/dusk/64/000000/jingle-bell.png">-->
+          <!--<img src="https://img.icons8.com/dusk/64/000000/christmas-star.png">-->
+          <!--<img src="https://img.icons8.com/dusk/64/000000/christmas-stocking.png">-->
+          <!--<img src="https://img.icons8.com/dusk/64/000000/christmas-tree.png">-->
+          <div id="snow">
+            <img @dblclick="startSnow" src="https://img.icons8.com/dusk/64/000000/snowflake.png">
+          </div>
 
+        </div>
+      </div>
+      <div id="third-page">
+        <h2>C наступающим</h2>
+      </div>
     </div>
-    <div id="third-page"><span class="text">Page 3</span></div>
   </div>
+
 </template>
 
 <script>
   import $ from 'jquery';
   import '../lib/turn.min';
+  import { Draggable } from 'draggable-vue-directive'
   import VueSticker from 'vue-sticker'
     export default {
       name: "Notebook",
@@ -21,6 +39,14 @@
       },
       components: {
         VueSticker
+      },
+      methods: {
+        startSnow: function () {
+          document.body.style.backgroundImage = "url('../../static/img/snow.gif')";
+        }
+      },
+      directives: {
+        Draggable
       }
     }
 </script>
@@ -30,11 +56,14 @@
     position: relative;
     text-align:  center;
   }
+  .sticker img{
+    height: 60px;
+  }
   #magazine{
     width: 700px;
     height: 400px;
     position: absolute;
-    top: 100px;
+    top: 50px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -45,5 +74,10 @@
   }
   #magazine div {
     background-color: gold;
+  }
+  .stickers {
+    position: relative;
+    left: 100px;
+    top: 100px;
   }
 </style>
