@@ -1,13 +1,14 @@
 <template>
   <div id="cupboard">
-    <button @click="setBound" v-on:click="show=!show">
+    <button @click="setBound" v-on:click="show=!show" id="button">
       Toggle
     </button>
+    <img src="/static/img/tornado.png" width="30px" @click="changePos" id="tornado" >
     <div id="bor" ref="border">
     </div>
     <transition name="up">
       <div v-if="show">
-        <div @click="changePos" id="box">
+        <div  id="box">
           <ball v-bind:style="randomPosition" v-draggable="draggableValue"></ball>
           <div v-bind:style="randomPosition" v-draggable="draggableValue">
             <img src="../../static/img/монетка.png" alt="">
@@ -18,6 +19,7 @@
          </div>
        </div>
     </transition>
+
   </div>
 </template>
 
@@ -55,6 +57,8 @@
       methods: {
         setBound: function () {
           this.draggableValue.boundingElement = this.$refs.border;
+          document.getElementById("button").remove();
+          document.getElementById("tornado").style.display = "block"
         },
         changePos: function () {
           var randXY = function(min,max){
@@ -111,6 +115,11 @@
   .up-enter, .up-leave-to{
     opacity: 0;
     transform: translateY(-100px);
+  }
+  #tornado{
+    display: none;
+    position: absolute;
+    z-index: 10;
   }
 
 </style>
