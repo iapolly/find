@@ -1,5 +1,6 @@
 <template>
-    <div id="table" @click="changePos" ref="bounder">
+  <div>
+    <div id="table"  ref="bounder">
       <ball v-bind:style="randomPosition" v-draggable="draggableValue"></ball>
       <player v-bind:style="randomPosition" v-draggable="draggableValue"></player>
       <laptop v-bind:style="randomPosition" v-draggable="draggableValue"></laptop>
@@ -9,6 +10,8 @@
       <wallet v-bind:style="randomPosition" v-draggable="draggableValue"></wallet>
       <money v-bind:style="randomPosition" v-draggable="draggableValue"></money>
     </div>
+    <img src="/static/img/tornado.png" width="30px" @click="changePos">
+  </div>
 </template>
 
 <script>
