@@ -23,7 +23,7 @@
         <h2>Happy New Year</h2>
       </div>
       <div id="end-page">
-        <div id="note">
+        <div id="note" @dblclick="goToCap">
           <img src="../../static/img/sticker.png" alt="">
         </div>
       </div>
@@ -36,18 +36,18 @@
   import $ from 'jquery';
   import '../lib/turn.min';
   import { Draggable } from 'draggable-vue-directive'
-  import VueSticker from 'vue-sticker'
     export default {
       name: "Notebook",
       mounted () {
         $('#magazine').turn({gradients: true, acceleration: true});
       },
-      components: {
-        VueSticker
-      },
       methods: {
         startSnow: function () {
           document.body.style.backgroundImage = "url('../../static/img/snow.gif')";
+        },
+        goToCap: function () {
+          document.body.style.backgroundImage = null;
+          window.location.href="http://localhost:8080/#/capboard";
         }
       },
       directives: {
