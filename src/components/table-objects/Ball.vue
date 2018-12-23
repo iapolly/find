@@ -14,14 +14,13 @@ export default {
     action: function (e) {
       var ball = document.getElementById("ball");
       var bum = document.getElementById("bum");
-      bum.style.marginLeft = ball.offsetWidth -400 + 'px';
-      bum.style.marginTop = ball.offsetTop  + 'px';
+      bum.style.marginLeft = ball.offsetWidth - 400 + 'px';
+      bum.style.marginTop = ball.offsetTop + 'px';
       ball.style.display = 'none';
       bum.style.display = 'block';
       setTimeout(function () {
         window.location.href = 'http://localhost:8080/#/second';
       }, 1000)
-
     }
   },
   directives: {
