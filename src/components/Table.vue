@@ -1,14 +1,13 @@
 <template>
-    <div id="table" ref="bounder">
-      <ball v-draggable="draggableValue"></ball>
-      <player v-draggable="draggableValue"></player>
-      <laptop v-draggable="draggableValue"></laptop>
-      <lipstick v-draggable="draggableValue"></lipstick>
-      <paper v-draggable="draggableValue"></paper>
-      <can v-draggable="draggableValue"></can>
-      <wallet v-draggable="draggableValue"></wallet>
-      <money v-draggable="draggableValue"></money>
-
+    <div id="table" @click="changePos" ref="bounder">
+      <ball v-bind:style="randomPosition" v-draggable="draggableValue"></ball>
+      <player v-bind:style="randomPosition" v-draggable="draggableValue"></player>
+      <laptop v-bind:style="randomPosition" v-draggable="draggableValue"></laptop>
+      <lipstick v-bind:style="randomPosition" v-draggable="draggableValue"></lipstick>
+      <paper v-bind:style="randomPosition" v-draggable="draggableValue"></paper>
+      <can v-bind:style="randomPosition" v-draggable="draggableValue"></can>
+      <wallet v-bind:style="randomPosition" v-draggable="draggableValue"></wallet>
+      <money v-bind:style="randomPosition" v-draggable="draggableValue"></money>
     </div>
 </template>
 
@@ -39,51 +38,44 @@ export default {
   directives: {
     Draggable
   },
-
-  // methods: {
-  //   randomLeft: function () {
-  //   let min = 0;
-  //   let max = 560;
-  //   var rand = min - 0.5 + Math.random() * (max - min + 1);
-  //   rand = Math.round(rand);
-  //   return rand;
-  //   },
-  //   randomTop: function () {
-  //   let min = 0;
-  //   let max = 300;
-  //   var rand = min - 0.5 + Math.random() * (max - min + 1);
-  //   rand = Math.round(rand);
-  //   return rand;
-  //   }
-  // },
   created() {
-
   },
   data() {
     return {
       draggableValue: {
-        boundingElement: $('#table'),
-        // resetInitialPos: {
-        //   top: '100px',
-        //   left: '100px'
-        // }
-
+        boundingElement: undefined
       }
-  }
+    }
+  },
+  methods: {
+    changePos: function () {
+      var randXY = function(min,max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min + 'px';
+      };
+      //граница
+      let box = document.getElementById("table");
+      $("#table").children().each(function () {
+        let h = $(this)[0].firstChild.clientHeight;
+        let w = $(this)[0].firstChild.clientHeight;
+        let top = randXY(-120,box.offsetHeight - h - 110);
+        let left = randXY(-220,box.offsetWidth - w - 220);
+        $(this).find("*").css({'top': top,'left': left, 'position': 'absolute'});
+      })
+    }
+  },
+  computed: {
+    randomPosition: function () {
+      return {
+        left: '220px',
+        top: '120px',
+        position: 'absolute'
+      }
+    }
   },
   mounted() {
     this.draggableValue.boundingElement = this.$refs.bounder;
-    // $('#table').each(function(o){
-    //   $(o).css({
-    //     position: 'relative'
-    //   });
-    //   alert("jkjkj");
-    // var ball = $('#ball');
-    // ball.offset({top:300, left:200});
-    //
-    // });
-    // $('#ball').offsetLeft = Math.round(0.5 + Math.random() * (301)) + 'px';
-    // $('#ball').offsetTop = Math.round(0.5 + Math.random() * (561)) + 'px'
   }
 }
 </script>

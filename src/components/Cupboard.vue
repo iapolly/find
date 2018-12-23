@@ -7,12 +7,12 @@
     </div>
     <transition name="up">
       <div v-if="show">
-        <div id="box">
-          <ball></ball>
-          <div style="position: absolute;" v-bind:style="randomPosition" v-draggable="draggableValue">
+        <div @click="changePos" id="box">
+          <ball v-bind:style="randomPosition" v-draggable="draggableValue"></ball>
+          <div v-bind:style="randomPosition" v-draggable="draggableValue">
             <img src="../../static/img/монетка.png" alt="">
           </div>
-          <div style="position: absolute;" v-bind:style="randomPosition" v-draggable="draggableValue">
+          <div v-bind:style="randomPosition" v-draggable="draggableValue">
             <img src="../../static/img/монетка.png" alt="">
           </div>
          </div>
@@ -43,39 +43,36 @@
       directives: {
         Draggable
       },
-      // computed: {
-      //   randomPosition: function () {
-      //     return {
-      //       left: this.randomLeft() + 'px',
-      //       top: this.randomTop() + 'px'
-      //     }
-      //   }
-      // },
+      computed: {
+        randomPosition: function () {
+          return {
+            left: '300px',
+            top: '100px',
+            position: 'absolute'
+          }
+        }
+      },
       methods: {
         setBound: function () {
           this.draggableValue.boundingElement = this.$refs.border;
         },
-        randomLeft: function () {
-          let min = 0;
-          let max = 560;
-          var rand = min - 0.5 + Math.random() * (max - min + 1);
-          rand = Math.round(rand);
-          return rand;
-        },
-        randomTop: function () {
-          let min = 0;
-          let max = 300;
-          var rand = min - 0.5 + Math.random() * (max - min + 1);
-          rand = Math.round(rand);
-          alert('назначает');
-          return rand;
+        changePos: function () {
+          var randXY = function(min,max){
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min + 'px';
+          };
+          //граница
+          let box = document.getElementById("box");
+          $("#box").children().each(function () {
+            let h = $(this)[0].firstChild.clientHeight;
+            let w = $(this)[0].firstChild.clientHeight;
+            let top = randXY(-100,box.offsetHeight - h -100);
+            let left = randXY(-300,box.offsetWidth - w - 300);
+            $(this).find("*").css({'top': top,'left': left, 'position': 'absolute'});
+          })
         }
       },
-      created: function () {
-        $('#box').сhildren('div').each(function () {
-          alert("ddd");
-        });
-      }
     }
 </script>
 
