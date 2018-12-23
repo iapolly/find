@@ -7,9 +7,7 @@
     <img src="/static/img/shirt3.png" id="second"  class="a">
     <img src="/static/img/shirt2.png" id="third"  class="a">
     <img src="/static/img/shirt0.png" id="forth"  class="a">
-
   </div>
-    
 </template>
 
 <script>
@@ -36,7 +34,6 @@
           document.getElementById("third").style.display = 'none';
           document.getElementById("forth").style.display = 'block';
           document.getElementById("fe3").style.display = 'none';
-
         }
       }
     }
