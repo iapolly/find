@@ -7,7 +7,8 @@ import Table from '../components/Table'
 import Notebook from '../components/Notebook'
 import Settings from '../components/Settings'
 import Credits from '../components/Credits'
-
+import Cupboard from '../components/Cupboard'
+import Shirt from '../components/Shirt'
 Vue.use(Router)
 
 export default new Router({
@@ -17,6 +18,8 @@ export default new Router({
     {path: '/settings', component: Settings},
     {path: '/first', component: Table},
     {path: '/second', component: Notebook},
-    {path: '/credits', component: Credits}
+    {path: '/credits', component: Credits},
+    {path: '/cupboard', component: Cupboard},
+    {path: '/short', component: Shirt}
   ]
 })

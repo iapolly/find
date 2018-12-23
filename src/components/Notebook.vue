@@ -20,7 +20,12 @@
         </div>
       </div>
       <div id="third-page">
-        <h2>C наступающим</h2>
+        <h2>Happy New Year</h2>
+      </div>
+      <div id="end-page">
+        <div id="note">
+          <img src="../../static/img/sticker.png" alt="">
+        </div>
       </div>
     </div>
   </div>
@@ -74,6 +79,11 @@
   }
   #magazine div {
     background-color: gold;
+  }
+  #note {
+    position: relative;
+    left: 20px;
+    top: 30px;
   }
   .stickers {
     position: relative;
