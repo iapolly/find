@@ -47,7 +47,7 @@
         },
         goToCap: function () {
           document.body.style.backgroundImage = null;
-          window.location.href="http://localhost:8080/#/capboard";
+          window.location.href="http://localhost:8080/#/cupboard";
         }
       },
       directives: {

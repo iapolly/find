@@ -1,7 +1,7 @@
 <template>
   <div class="table-object">
     <img id="ball" v-on:dblclick="action" src="/static/img/мячик.png">
-    <img src="/static/img/bum.png" id="bum">
+    <img src="/static/img/buum.png" id="bum">
   </div>
 </template>
 
@@ -14,8 +14,8 @@ export default {
     action: function (e) {
       var ball = document.getElementById("ball");
       var bum = document.getElementById("bum");
-      bum.style.marginLeft = ball.offsetWidth -400 + 'px';
-      bum.style.marginTop = ball.offsetTop  + 'px';
+      bum.style.marginLeft = ball.offsetWidth -300 + 'px';
+      bum.style.marginTop = ball.offsetTop -100 + 'px';
       ball.style.display = 'none';
       bum.style.display = 'block';
       setTimeout(function () {
@@ -37,6 +37,6 @@ export default {
   }
   #bum {
     display: none;
-    width: 800px;
+    width: 500px;
   }
 </style>

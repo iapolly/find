@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div id="table" ref="bounder">
       <ball v-draggable="draggableValue"></ball>
       <player v-draggable="draggableValue"></player>
@@ -8,8 +9,9 @@
       <can v-draggable="draggableValue"></can>
       <wallet v-draggable="draggableValue"></wallet>
       <money v-draggable="draggableValue"></money>
-
     </div>
+    <img src="/static/img/tornado.png" id="uragan" >
+  </div>
 </template>
 
 <script>
@@ -100,5 +102,8 @@ export default {
     bottom: 0;
     left: 0;
     margin: auto;
+  }
+  #uragan{
+    width: 30px;
   }
 </style>

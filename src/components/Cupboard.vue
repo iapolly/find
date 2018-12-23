@@ -28,12 +28,14 @@
 <style scoped>
   #box {
 
-    height: 300px;
+    height: 430px;
     width: 700px;
     position: absolute;
     right: 0;
     left: 0;
     margin: auto;
+    background-image: url("/static/img/capboard.png");
+    background-size: cover;
   }
   .up-enter-active, .up-leave-active {
     transition: all 1s;
