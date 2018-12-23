@@ -4,7 +4,10 @@
 
 <script>
     export default {
-        name: "Shirt"
+        name: "Shirt",
+        mounted() {
+          this.$cookie.set('last', 't-shirt', 1);
+        }
     }
 </script>
 
