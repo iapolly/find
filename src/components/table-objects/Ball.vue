@@ -6,7 +6,6 @@
 </template>
 
 <script>
-  import { Draggable } from 'draggable-vue-directive'
 
 export default {
   name: 'ball',
@@ -22,9 +21,6 @@ export default {
         window.location.href = 'http://localhost:8080/#/second';
       }, 1000)
     }
-  },
-  directives: {
-    Draggable
   }
 }
 </script>
