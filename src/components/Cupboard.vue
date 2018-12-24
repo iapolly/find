@@ -8,10 +8,13 @@
     </div>
     <transition name="up">
       <div v-if="show">
-        <div  id="box" >
-          <sock1 v-bind:style="randomPosition" v-for="n in 30"></sock1>
-          <sock2 v-bind:style="randomPosition" v-for="n in 30"></sock2>
-          <switer v-bind:style="randomPosition" v-for="n in 30"></switer>
+        <div id="box" >
+          <sock1 v-for="n in 10"></sock1>
+          <sock2 v-for="n in 50"></sock2>
+          <switer v-for="n in 30"></switer>
+          <sock1 v-for="n in 40"></sock1>
+          <sock2 v-for="n in 10"></sock2>
+          <switer v-for="n in 20"></switer>
         </div>
        </div>
     </transition>
@@ -24,7 +27,6 @@
   import sock1 from '../components/cupboard_obj/sock1'
   import sock2 from '../components/cupboard_obj/sock2'
   import switer from '../components/cupboard_obj/Switer'
-  import { Draggable } from 'draggable-vue-directive'
     export default {
     components: {
       sock1,
@@ -34,27 +36,11 @@
       name: "Сupboard",
       data() {
         return {
-          show: false,
-          draggableValue: {
-            boundingElement: this.$refs.border
-          }
-        }
-      },
-      directives: {
-        Draggable
-      },
-      computed: {
-        randomPosition: function () {
-          return {
-            left: '300px',
-            top: '100px',
-            position: 'absolute'
-          }
+          show: false
         }
       },
       methods: {
         setBound: function () {
-          // this.draggableValue.boundingElement = this.$refs.border;
           document.getElementById("button").remove();
           document.getElementById("tornado").style.display = "block"
         },
@@ -69,9 +55,11 @@
           $("#box").children().each(function () {
             let h = $(this)[0].firstChild.clientHeight;
             let w = $(this)[0].firstChild.clientHeight;
-            let top = randXY(-100,box.offsetHeight - h - 100);
-            let left = randXY(-300,box.offsetWidth - w - 300);
+            let top = randXY(0,box.offsetHeight - h - 130);
+            let left = randXY(0,box.offsetWidth - w - 130);
             $(this).find("*").css({'top': top,'left': left, 'position': 'absolute'});
+            $(this).find("*").addClass('draggable ui-widget-content');
+            $(this).find("*").draggable({ containment: "#bor", scroll: false });
           })
 
         }
@@ -90,10 +78,11 @@
     width: 40px;
   }
   #box {
-    background-color: darkred;
+    background-image: url("../../static/img/capboard.png");
+    background-size: cover;
     position: relative;
-    height: 300px;
-    width: 700px;
+    height: 450px;
+    width: 720px;
     right: 0;
     left: 0;
     margin: auto;
@@ -101,8 +90,8 @@
   /*прослойка для драга*/
   #bor {
     /*background-color: indianred;*/
-    height: 300px;
-    width: 700px;
+    height: 450px;
+    width: 720px;
     position: fixed;
     right: 0;
     left: 0;
@@ -119,6 +108,12 @@
     display: none;
     position: absolute;
     z-index: 10;
+  }
+
+  .cupboard-object {
+    left: 50px;
+    top: 50px;
+    position: absolute;
   }
 
 </style>

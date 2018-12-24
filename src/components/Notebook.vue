@@ -35,7 +35,6 @@
 <script>
   import $ from 'jquery';
   import '../lib/turn.min';
-  import { Draggable } from 'draggable-vue-directive'
     export default {
       name: "Notebook",
       mounted () {
@@ -50,9 +49,6 @@
           document.body.style.backgroundImage = null;
           window.location.href="http://localhost:8080/#/cupboard";
         }
-      },
-      directives: {
-        Draggable
       }
     }
 </script>
