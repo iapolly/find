@@ -11,12 +11,16 @@
 </template>
 
 <script>
+  import $ from 'jquery';
     export default {
-        name: "Shirt",
+      name: "Shirt",
+      mounted() {
+        this.$cookie.set('last', 'notebook', 1)
+      },
       methods: {
         act: function () {
           document.getElementById("shirt").style.marginLeft =
-            document.documentElement.offsetWidth/2-350 + 'px';
+            document.documentElement.offsetWidth / 2 - 350 + 'px';
         },
         goToSec: function () {
           document.getElementById("first").style.display = 'none';
@@ -37,7 +41,6 @@
         }
       }
     }
-
 </script>
 
 <style scoped>
