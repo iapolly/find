@@ -1,6 +1,6 @@
 <template>
   <div class="table-object" id="walletDiv">
-    <img src="/static/img/Кошелек.png" id="wallet" v-on:dblclick="walletPlay" >
+    <img src="/static/img/Кошелек.png" id="wallet" v-on:click="walletPlay" >
     <audio ref="audioElmWallet" src="/static/mp3/momoney.mp3"></audio>
   </div>
 

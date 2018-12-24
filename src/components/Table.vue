@@ -38,9 +38,6 @@ export default {
     wallet,
     money
   },
-  directives: {
-    Draggable
-  },
   created() {
   },
   data() {
@@ -49,6 +46,7 @@ export default {
   },
   methods: {
     changePos: function () {
+      document.getElementById("trash_can").style.display = 'none';
       var randXY = function(min,max){
         min = Math.ceil(min);
         max = Math.floor(max);

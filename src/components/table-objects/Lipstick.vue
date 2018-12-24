@@ -11,8 +11,12 @@
     methods: {
       action: function (e) {
         let kiss = document.getElementById("kiss");
-        kiss.style.marginLeft = document.getElementById("lipstick").offsetWidth - 100 + 'px';
-        kiss.style.marginTop = document.getElementById("lipstick").offsetTop  + 'px';
+        let lipstick = document.getElementById("lipstick");
+        // kiss.style.marginLeft = document.getElementById("lipstick").offsetWidth - 100 + 'px';
+        // kiss.style.marginTop = document.getElementById("lipstick").offsetTop  + 'px';
+        kiss.style.top = lipstick.getBoundingClientRect().top - 200+ 'px';
+        kiss.style.left = lipstick.getBoundingClientRect().left -230  + 'px';
+
         var w = 0;
         var timeout = setInterval(function (){
           if (w<100){
