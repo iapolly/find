@@ -21,7 +21,7 @@
         </div>
        </div>
     </transition>
-
+<go-back></go-back>
   </div>
 </template>
 
@@ -30,11 +30,13 @@
   import sock1 from '../components/cupboard_obj/sock1'
   import sock2 from '../components/cupboard_obj/sock2'
   import switer from '../components/cupboard_obj/Switer'
+  import goBack from  '../components/GoToMenu'
     export default {
     components: {
       sock1,
       sock2,
-      switer
+      switer,
+      goBack
     },
       name: "Сupboard",
       data() {

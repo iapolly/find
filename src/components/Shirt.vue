@@ -7,10 +7,12 @@
     <img src="/static/img/shirt3.png" id="second"  class="a">
     <img src="/static/img/shirt2.png" id="third"  class="a">
     <img src="/static/img/shirt0.png" id="forth"  class="a">
+
   </div>
 </template>
 
 <script>
+  import goBack from  '../components/GoToMenu'
     export default {
       name: "Shirt",
       mounted() {
