@@ -12,8 +12,8 @@
         let can = document.getElementById("trash_can");
         let paper = document.getElementById("paper");
         can.style.display = "block";
-        can.style.top = paper.getBoundingClientRect().top - 125 + 'px';
-        can.style.left = paper.getBoundingClientRect().left -220 + 'px';
+        can.style.top = paper.offsetTop  + can.getBoundingClientRect().height/3*2+ 'px';
+        can.style.left = paper.offsetLeft - 20+ 'px';
 
         var i = 1;
         setInterval(function () {

@@ -5,6 +5,7 @@
       <player></player>
       <laptop></laptop>
       <lipstick ></lipstick>
+      <kiss></kiss>
       <paper ></paper>
       <can></can>
       <wallet></wallet>
@@ -25,6 +26,7 @@ import paper from './table-objects/Paper'
   import can from './table-objects/TrashCan'
   import wallet from './table-objects/Wallet'
   import money from './table-objects/Money'
+  import kiss from '../components/table-objects/Kiss'
 
 export default {
   name: 'table',
@@ -33,6 +35,7 @@ export default {
     player,
     laptop,
     lipstick,
+    kiss,
     paper,
     can,
     wallet,
