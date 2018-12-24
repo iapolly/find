@@ -5,7 +5,6 @@
 </template>
 
 <script>
-  import { Draggable } from 'draggable-vue-directive'
     export default {
       name: "laptop",
       data: function () {
@@ -13,9 +12,6 @@
           defaultImg: "/static/img/Ноутбук0.png", 
           yellowImg: "/static/img/Ноутбук1.png"
         }
-      },
-      directives: {
-        Draggable
       }
     }
 </script>

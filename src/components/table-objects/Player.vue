@@ -6,9 +6,8 @@
 </template>
 
 <script>
-import { Draggable } from 'draggable-vue-directive'
 
-export default {
+  export default {
   name: 'player',
   data: function () {
     return {
@@ -26,9 +25,6 @@ export default {
         this.$data.playFlag = false;
       }
     }
-  },
-  directives: {
-    Draggable
   }
 }
 </script>

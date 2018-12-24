@@ -7,7 +7,6 @@
 </template>
 
 <script>
-  import { Draggable } from 'draggable-vue-directive'
   export default {
     name: 'wallet',
     methods: {
@@ -16,9 +15,6 @@
         audio.play();
       }
 
-    },
-    directives: {
-      Draggable
     }
   }
 

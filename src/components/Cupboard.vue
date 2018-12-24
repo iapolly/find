@@ -9,9 +9,9 @@
     <transition name="up">
       <div v-if="show">
         <div  id="box" >
-          <sock1 v-bind:style="randomPosition" v-for="n in 10"></sock1>
-          <sock2 v-bind:style="randomPosition" v-for="n in 10"></sock2>
-          <switer v-bind:style="randomPosition" v-for="n in 10"></switer>
+          <sock1 v-bind:style="randomPosition" v-for="n in 30"></sock1>
+          <sock2 v-bind:style="randomPosition" v-for="n in 30"></sock2>
+          <switer v-bind:style="randomPosition" v-for="n in 30"></switer>
         </div>
        </div>
     </transition>

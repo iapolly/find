@@ -5,16 +5,12 @@
 </template>
 
 <script>
-  import { Draggable } from 'draggable-vue-directive'
   export default {
     name: "TrashCan",
     methods: {
       canAction: function (el) {
         document.getElementById("trash_can").style.display = 'none';
       }
-    },
-    directives: {
-      Draggable
     }
   }
 

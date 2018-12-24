@@ -6,13 +6,9 @@
 </template>
 
 <script>
-  import { Draggable } from 'draggable-vue-directive'
 
   export default {
     name: 'money',
-    directives: {
-      Draggable
-    },
     methods:{
       del: function (e) {
 
