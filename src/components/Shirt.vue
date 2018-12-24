@@ -16,7 +16,7 @@
     export default {
       name: "Shirt",
       mounted() {
-        this.$cookie.set('last', 'notebook', 1);
+        this.$cookie.set('last', 'shirt', 1);
         document.getElementById("shirt").style.marginLeft = document.documentElement.offsetWidth / 2 - 300 + 'px';
       },
       methods: {

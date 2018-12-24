@@ -12,7 +12,6 @@
         </div>
       </div>
       <div id="third-page">
-        <h2>Happy New Year</h2>
       </div>
       <div id="end-page">
         <div id="note" @dblclick="goToCap">
@@ -46,6 +45,16 @@
 </script>
 
 <style scoped>
+  #second-page {
+    background-image: url("../../static/img/4.jpg");
+    background-size: cover;
+  }
+
+  #third-page {
+    background-image: url("../../static/img/3.jpg");
+    background-size: cover;
+  }
+
   #first-page {
     background-image: url("../../static/img/1.jpg");
     background-size: cover;

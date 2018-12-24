@@ -8,7 +8,7 @@
       <div v-if="last === 'table'"><router-link to="/first" ><h3>GO</h3></router-link></div>
       <div v-if="last === 'notebook'"><router-link to="/second" ><h3>GO</h3></router-link></div>
       <div v-if="last === 'cupboard'"><router-link to="/cupboard" ><h3>GO</h3></router-link></div>
-      <div v-if="last === 't-shirt'"><router-link to="/shirt" ><h3>GO</h3></router-link></div>
+      <div v-if="last === 'shirt'"><router-link to="/shirt" ><h3>GO</h3></router-link></div>
     </div>
   </div>
 

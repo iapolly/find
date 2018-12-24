@@ -4,9 +4,9 @@
       <ball></ball>
       <player></player>
       <laptop></laptop>
+      <paper></paper>
       <lipstick ></lipstick>
       <kiss></kiss>
-      <paper ></paper>
       <can></can>
       <wallet></wallet>
       <money></money>
