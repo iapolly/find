@@ -54,17 +54,17 @@ position: absolute;
     z-index: 10;
   }
   #fe1{
-    padding-left: 350px;
-    padding-top: 220px;
+    left: 350px;
+    top: 220px;
   }
   #fe2{
-    padding-left: 270px;
-    padding-top: 300px;
+    left: 270px;
+    top: 300px;
     display: none;
   }
   #fe3{
-    padding-left: 390px;
-    padding-top: 590px;
+    left: 390px;
+    top: 590px;
     display: none;
   }
   #first{
