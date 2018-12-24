@@ -12,6 +12,7 @@
       <money></money>
     </div>
     <img src="/static/img/tornado.png" width="30px" @click="changePos">
+    <go-back></go-back>
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import paper from './table-objects/Paper'
   import wallet from './table-objects/Wallet'
   import money from './table-objects/Money'
   import kiss from '../components/table-objects/Kiss'
+  import goBack from  '../components/GoToMenu'
 
 export default {
   name: 'table',
@@ -38,7 +40,8 @@ export default {
     paper,
     can,
     wallet,
-    money
+    money,
+    goBack
   },
   created() {
   },
