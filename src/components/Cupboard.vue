@@ -15,6 +15,7 @@
           <sock1 v-for="n in 40"></sock1>
           <sock2 v-for="n in 10"></sock2>
           <switer v-for="n in 20"></switer>
+          <img src="/static/img/ittleShirtForCupboard.png" width="100px" id="littleShirt" class="cupboard-object">
         </div>
        </div>
     </transition>
