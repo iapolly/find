@@ -1,5 +1,5 @@
 <template>
-  <div id="shirt" v-on:mousemove="act">
+  <div id="shirt">
     <div class="fe" id="fe1" v-on:click="goToSec"></div>
     <div class="fe" id="fe2" v-on:click="goToThird"></div>
     <div class="fe" id="fe3" v-on:click="goToForth"></div>
@@ -15,13 +15,10 @@
     export default {
       name: "Shirt",
       mounted() {
-        this.$cookie.set('last', 'notebook', 1)
+        this.$cookie.set('last', 'notebook', 1);
+        document.getElementById("shirt").style.marginLeft = document.documentElement.offsetWidth / 2 - 300 + 'px';
       },
       methods: {
-        act: function () {
-          document.getElementById("shirt").style.marginLeft =
-            document.documentElement.offsetWidth / 2 - 350 + 'px';
-        },
         goToSec: function () {
           document.getElementById("first").style.display = 'none';
           document.getElementById("second").style.display = 'block';
@@ -48,7 +45,7 @@
 position: absolute;
 }
   .a{
-    width: 700px ;
+    width: 600px ;
   }
   .fe{
     width: 30px;
