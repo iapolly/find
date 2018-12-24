@@ -7,16 +7,9 @@
       </div>
       <div id="second-page">
         <div class="stickers">
-          <!--<img v-draggable src="https://img.icons8.com/dusk/64/000000/christmas-penguin.png">-->
-          <!--<img src="https://img.icons8.com/dusk/64/000000/christmas-candy.png">-->
-          <!--<img src="https://img.icons8.com/dusk/64/000000/jingle-bell.png">-->
-          <!--<img src="https://img.icons8.com/dusk/64/000000/christmas-star.png">-->
-          <!--<img src="https://img.icons8.com/dusk/64/000000/christmas-stocking.png">-->
-          <!--<img src="https://img.icons8.com/dusk/64/000000/christmas-tree.png">-->
           <div id="snow">
             <img @dblclick="startSnow" src="https://img.icons8.com/dusk/64/000000/snowflake.png">
           </div>
-
         </div>
       </div>
       <div id="third-page">
@@ -54,6 +47,10 @@
 </script>
 
 <style scoped>
+  #first-page {
+    background-image: url("../../static/img/1.jpg");
+    background-size: cover;
+  }
   h1 {
     position: relative;
     text-align:  center;

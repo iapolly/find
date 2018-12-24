@@ -3,9 +3,12 @@
 }
 
 .header {
+  left: 0;
+  top: 0;
+  bottom: 0;
   position: fixed;
   height: 2000px;
-  background: url(../img/background.jpg) no-repeat center center fixed;
+  background: url(../img/background2.jpg) no-repeat center center fixed;
   background-size: cover;
   text-align: center;
   /*max-width: 1920px;*/
