@@ -14,7 +14,7 @@
             <img src="../../static/img/монетка.png" alt="" v-draggable="draggableValue">
           </div>
           <div v-bind:style="randomPosition" v-draggable="draggableValue">
-            <img src="../../static/img/монетка.png" alt="">
+            <img src="../../static/img/монетка.png" alt="" v-draggable="draggableValue">
           </div>
          </div>
        </div>

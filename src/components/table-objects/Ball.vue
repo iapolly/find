@@ -37,5 +37,7 @@ export default {
   #bum {
     display: none;
     width: 800px;
+    position: absolute;
+    z-index: 100;
   }
 </style>
