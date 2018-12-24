@@ -17,7 +17,6 @@
 
 <script>
   import $ from 'jquery'
-  import { Draggable } from 'draggable-vue-directive'
 import ball from '../components/table-objects/Ball'
 import player from '../components/table-objects/Player'
 import  laptop from './table-objects/Laptop'
