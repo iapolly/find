@@ -10,6 +10,9 @@ import Credits from '../components/Credits'
 import Cupboard from '../components/Cupboard'
 import Shirt from '../components/Shirt'
 Vue.use(Router)
+var VueCookie = require('vue-cookie');
+// Tell Vue to use the plugin
+Vue.use(VueCookie);
 
 export default new Router({
   routes: [

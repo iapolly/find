@@ -40,6 +40,7 @@
       name: "Notebook",
       mounted () {
         $('#magazine').turn({gradients: true, acceleration: true});
+        this.$cookie.set('last', 'notebook', 1);
       },
       methods: {
         startSnow: function () {

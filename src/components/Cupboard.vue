@@ -76,6 +76,9 @@
 
         }
       },
+      mounted() {
+        this.$cookie.set('last', 'cupboard', 1);
+      }
     }
 </script>
 

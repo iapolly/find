@@ -79,6 +79,7 @@ export default {
   },
   mounted() {
     this.draggableValue.boundingElement = this.$refs.bounder;
+    this.$cookie.set('last', 'table', 1);
   }
 }
 </script>
