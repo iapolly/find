@@ -9,10 +9,11 @@ import Settings from '../components/Settings'
 import Credits from '../components/Credits'
 import Cupboard from '../components/Cupboard'
 import Shirt from '../components/Shirt'
-Vue.use(Router)
+Vue.use(Router);
 var VueCookie = require('vue-cookie');
 // Tell Vue to use the plugin
 Vue.use(VueCookie);
+Vue.use(require('webpack-jquery-ui'));
 
 export default new Router({
   routes: [

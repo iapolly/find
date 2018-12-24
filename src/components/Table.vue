@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div id="table"  ref="bounder">
-      <ball v-bind:style="randomPosition" v-draggable="draggableValue"></ball>
-      <player v-bind:style="randomPosition" v-draggable="draggableValue"></player>
-      <laptop v-bind:style="randomPosition" v-draggable="draggableValue"></laptop>
-      <lipstick v-bind:style="randomPosition" v-draggable="draggableValue"></lipstick>
-      <paper v-bind:style="randomPosition" v-draggable="draggableValue"></paper>
-      <can v-bind:style="randomPosition" v-draggable="draggableValue"></can>
-      <wallet v-bind:style="randomPosition" v-draggable="draggableValue"></wallet>
-      <money v-bind:style="randomPosition" v-draggable="draggableValue"></money>
+    <div id="table" ref="bounder">
+      <ball></ball>
+      <player></player>
+      <laptop></laptop>
+      <lipstick ></lipstick>
+      <paper ></paper>
+      <can></can>
+      <wallet></wallet>
+      <money></money>
     </div>
     <img src="/static/img/tornado.png" width="30px" @click="changePos">
   </div>
@@ -45,9 +45,6 @@ export default {
   },
   data() {
     return {
-      draggableValue: {
-        boundingElement: undefined
-      }
     }
   },
   methods: {
@@ -61,24 +58,16 @@ export default {
       let box = document.getElementById("table");
       $("#table").children().each(function () {
         let h = $(this)[0].firstChild.clientHeight;
-        let w = $(this)[0].firstChild.clientHeight;
-        let top = randXY(-120,box.offsetHeight - h - 110);
-        let left = randXY(-220,box.offsetWidth - w - 220);
-        $(this).find("*").css({'top': top,'left': left, 'position': 'absolute'});
-      })
-    }
-  },
-  computed: {
-    randomPosition: function () {
-      return {
-        left: '220px',
-        top: '120px',
-        position: 'absolute'
-      }
+        let w = $(this)[0].firstChild.clientWidth;
+        let top = randXY(0,box.offsetHeight - h);
+        let left = randXY(0,box.offsetWidth - w);
+        $(this).find("*").css({'top': top,'left': left});
+        $(this).find("*").addClass('draggable ui-widget-content');
+        $(this).find("*").draggable({ containment: "#table", scroll: false });
+      });
     }
   },
   mounted() {
-    this.draggableValue.boundingElement = this.$refs.bounder;
     this.$cookie.set('last', 'table', 1);
   }
 }
@@ -96,5 +85,9 @@ export default {
     bottom: 0;
     left: 0;
     margin: auto;
+  }
+
+  .table-object {
+    position: absolute;
   }
 </style>

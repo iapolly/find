@@ -54,7 +54,7 @@
       },
       methods: {
         setBound: function () {
-          this.draggableValue.boundingElement = this.$refs.border;
+          // this.draggableValue.boundingElement = this.$refs.border;
           document.getElementById("button").remove();
           document.getElementById("tornado").style.display = "block"
         },
@@ -69,7 +69,7 @@
           $("#box").children().each(function () {
             let h = $(this)[0].firstChild.clientHeight;
             let w = $(this)[0].firstChild.clientHeight;
-            let top = randXY(-100,box.offsetHeight - h -100);
+            let top = randXY(-100,box.offsetHeight - h - 100);
             let left = randXY(-300,box.offsetWidth - w - 300);
             $(this).find("*").css({'top': top,'left': left, 'position': 'absolute'});
           })
