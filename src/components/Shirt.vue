@@ -53,17 +53,17 @@ position: absolute;
     z-index: 10;
   }
   #fe1{
-    left: 350px;
-    top: 220px;
+    left: 300px;
+    top: 185px;
   }
   #fe2{
-    left: 270px;
-    top: 300px;
+    left: 232px;
+    top: 255px;
     display: none;
   }
   #fe3{
-    left: 390px;
-    top: 590px;
+    left: 336px;
+    top: 495px;
     display: none;
   }
   #first{
