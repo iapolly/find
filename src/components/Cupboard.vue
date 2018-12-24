@@ -8,15 +8,11 @@
     </div>
     <transition name="up">
       <div v-if="show">
-        <div  id="box">
-          <ball v-bind:style="randomPosition" v-draggable="draggableValue"></ball>
-          <div v-bind:style="randomPosition" v-draggable="draggableValue">
-            <img src="../../static/img/монетка.png" alt="" v-draggable="draggableValue">
-          </div>
-          <div v-bind:style="randomPosition" v-draggable="draggableValue">
-            <img src="../../static/img/монетка.png" alt="" v-draggable="draggableValue">
-          </div>
-         </div>
+        <div  id="box" >
+          <sock1 v-bind:style="randomPosition" v-for="n in 10"></sock1>
+          <sock2 v-bind:style="randomPosition" v-for="n in 10"></sock2>
+          <switer v-bind:style="randomPosition" v-for="n in 10"></switer>
+        </div>
        </div>
     </transition>
 
@@ -25,13 +21,15 @@
 
 <script>
   import $ from 'jquery'
-  import ball from '../components/table-objects/Ball'
-  import player from '../components/table-objects/Player'
+  import sock1 from '../components/cupboard_obj/sock1'
+  import sock2 from '../components/cupboard_obj/sock2'
+  import switer from '../components/cupboard_obj/Switer'
   import { Draggable } from 'draggable-vue-directive'
     export default {
     components: {
-      ball,
-      player
+      sock1,
+      sock2,
+      switer
     },
       name: "Сupboard",
       data() {
@@ -75,6 +73,7 @@
             let left = randXY(-300,box.offsetWidth - w - 300);
             $(this).find("*").css({'top': top,'left': left, 'position': 'absolute'});
           })
+
         }
       },
     }
