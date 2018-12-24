@@ -7,7 +7,7 @@
 
 <script>
 
-export default {
+  export default {
   name: 'player',
   data: function () {
     return {

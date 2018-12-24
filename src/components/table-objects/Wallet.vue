@@ -14,6 +14,7 @@
         let audio = this.$refs.audioElmWallet;
         audio.play();
       }
+
     }
   }
 
