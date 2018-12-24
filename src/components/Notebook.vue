@@ -3,7 +3,6 @@
     <div style="height: 100px"></div>
     <div id="magazine">
       <div id="first-page">
-        <h1>Open me</h1>
       </div>
       <div id="second-page">
         <div class="stickers">
@@ -51,6 +50,10 @@
     background-image: url("../../static/img/1.jpg");
     background-size: cover;
   }
+  #end-page {
+    background-image: url("../../static/img/2.jpg");
+    background-size: cover;
+  }
   h1 {
     position: relative;
     text-align:  center;
@@ -72,7 +75,7 @@
     background-color:#ccc;
   }
   #magazine div {
-    background-color: gold;
+    /*background-color: gold;*/
   }
   #note {
     position: relative;

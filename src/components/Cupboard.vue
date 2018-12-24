@@ -1,7 +1,7 @@
 <template>
   <div id="cupboard">
     <button @click="setBound" v-on:click="show=!show" id="button">
-      Toggle
+      <img src="https://img.icons8.com/ios/50/000000/open-sign.png" alt="">
     </button>
     <img src="/static/img/tornado.png" width="30px" @click="changePos" id="tornado" >
     <div id="bor" ref="border">
@@ -9,13 +9,15 @@
     <transition name="up">
       <div v-if="show">
         <div id="box" >
+          <div id="littleShirt" class="cupboard-object">
+            <img src="/static/img/ittleShirtForCupboard.png" >
+          </div>
           <sock1 v-for="n in 10"></sock1>
           <sock2 v-for="n in 50"></sock2>
           <switer v-for="n in 30"></switer>
           <sock1 v-for="n in 40"></sock1>
           <sock2 v-for="n in 10"></sock2>
           <switer v-for="n in 20"></switer>
-          <img src="/static/img/ittleShirtForCupboard.png" width="100px" id="littleShirt" class="cupboard-object">
         </div>
        </div>
     </transition>
@@ -76,7 +78,7 @@
     position: absolute;
   }
   img {
-    width: 40px;
+    width: 50px;
   }
   #box {
     background-image: url("../../static/img/capboard.png");
