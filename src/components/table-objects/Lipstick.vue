@@ -6,8 +6,6 @@
 </template>
 
 <script>
-  import { Draggable } from 'draggable-vue-directive'
-
   export default {
     name: 'lipstick',
     methods: {
@@ -27,11 +25,7 @@
             }, 500);
           }}, 25);
       }
-    },
-    directives: {
-      Draggable
     }
-
   }
 </script>
 

@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { Draggable } from 'draggable-vue-directive'
   export default {
     name: "Paper",
     methods: {
@@ -28,9 +27,6 @@ import { Draggable } from 'draggable-vue-directive'
           }
         }, 30);
       }
-    },
-    directives: {
-      Draggable
     }
   }
 
