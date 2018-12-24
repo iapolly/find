@@ -4,7 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+Vue.use(require('webpack-jquery-ui'));
 
 new Vue({
   el: '#app',
